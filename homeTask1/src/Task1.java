@@ -8,9 +8,7 @@ public class Task1 {
 
 
 	public static void main(String[] args) {
-		// args from arguments from command line
-
-
+		
 		// default Values;
 		//  square
 		double S = 18;
@@ -19,6 +17,7 @@ public class Task1 {
 		// Discriminant
 		double D;
 
+		// get args  from command line first is P second is S
 		// get P
 		if (args[0].length() != 0) {
 				P = Integer.parseInt(args[0]);
