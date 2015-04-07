@@ -8,23 +8,24 @@ public class Task1 {
 
 
 	public static void main(String[] args) {
-		
+
 		// default Values;
 		//  square
-		double S = 18;
+		double square = 18;
 		//perimetr
-		double P = 18;
+		double perimirt = 18;
 		// Discriminant
-		double D;
+		double discr;
 
 		// get args  from command line first is P second is S
 		// get P
 		if (args[0].length() != 0) {
-				P = Integer.parseInt(args[0]);
+			perimirt = Double.parseDouble(args[0]);
+
 		}
 		// get S
 		if (args[0].length() != 0) {
-			S = Integer.parseInt(args[1]);
+			square = Double.parseDouble(args[1]);
 		}
 
 
@@ -34,15 +35,15 @@ public class Task1 {
 		// D=b^2-4ac
 
 		// Discriminant
-		D = Math.pow((P / 2), 2) - 4 * S;
+		discr = Math.pow((perimirt / 2), 2) - 4 * square;
 
-		if (D < 0) {
+		if (discr < 0) {
 			System.out.println("Discriminant is less than 0, no solution");
 			return;
 		}
 
-		double a = ((P / 2) + Math.sqrt(D)) / 2;
-		double b = P / 2 - a;
+		double a = ((perimirt / 2) + Math.sqrt(discr)) / 2;
+		double b = perimirt / 2 - a;
 
 		System.out.println("Side a= " + a + " Side b=" + b);
 
