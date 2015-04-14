@@ -19,6 +19,7 @@ public class cryptString {
 
 	public static void main(String[] args) {
 
+
 		//get string
 		String message = JOptionPane.showInputDialog("Please message: ");
 		//get coding
@@ -66,7 +67,6 @@ public class cryptString {
 		//frame.pack();
 		// and show
 		frame.setVisible(true);
-
 
 	}
 
