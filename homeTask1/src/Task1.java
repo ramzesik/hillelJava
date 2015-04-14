@@ -1,6 +1,6 @@
 /**
  * Created by Ramzes on 07.04.2015.
- * <p/>
+ * <p>
  * psvm
  * sout
  * doInBackground(String... params)
@@ -22,7 +22,6 @@ public class Task1 {
 		// get P
 		if (args[0].length() != 0) {
 			perimirt = Double.parseDouble(args[0]);
-
 		}
 		// get S
 		if (args[0].length() != 0) {
@@ -46,7 +45,7 @@ public class Task1 {
 		double a = ((perimirt / 2) + Math.sqrt(discr)) / 2;
 		double b = perimirt / 2 - a;
 
-		System.out.println("Side a= " + a + " Side b=" + b);
+		System.out.println("Side a= " + String.format("%.2f", a) + " Side b=" + String.format("%.2f", b));
 
 	}
 
