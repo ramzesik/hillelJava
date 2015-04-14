@@ -1,5 +1,8 @@
 /**
  * Created by Ramzes on 15.04.2015.
+ *
+ * have question can't use char ^ char = ret int
+ * line 84
  */
 
 import javax.swing.*;
