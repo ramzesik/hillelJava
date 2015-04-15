@@ -2,6 +2,7 @@
  * Created by Ramzes on 15.04.2015.
  *
  * have question can't use char ^ char = ret int
+ * print not visible char bytes
  * line 84
  */
 
@@ -18,10 +19,12 @@ public class cryptString {
 
 
 	public static void main(String[] args) {
-
+		//string =my message
+		//key phrase =coded string123
+		//Crypted Message=DS
 
 		//get string
-		String message = JOptionPane.showInputDialog("Please message: ");
+		String message = JOptionPane.showInputDialog("Please enter message: ");
 		//get coding
 		String keyPhrase = JOptionPane.showInputDialog("Please input key phrase: ");
 
@@ -42,7 +45,6 @@ public class cryptString {
 
 		JPanel upperPanel = new JPanel();
 		frame.getContentPane().add(upperPanel, "North");
-
 		JTextArea textArea = new JTextArea(2, 20);
 
 		// create border
@@ -73,6 +75,10 @@ public class cryptString {
 	// method to cryp or decrypt text
 	public static String myCrypt(String message, String key) {
 
+		//string =12345
+		//key phrase =1234567890
+		//Crypted Message=
+
 		char[] messageChar = message.toCharArray();
 		char[] keyChar = key.toCharArray();
 		// new array with coded string
@@ -95,6 +101,7 @@ public class cryptString {
 
 		//convert bytes to String
 		String crypted = new String(coded);
+		System.out.println(crypted);
 		return crypted;
 	}
 
