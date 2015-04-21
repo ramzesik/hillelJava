@@ -12,30 +12,27 @@ import java.io.PrintWriter;
 public class ProcessingParams {
 	/**
 	 * String to by crypted
-	 *
-	 * @var
 	 */
 	String message;
 	/**
 	 * Code phrase
-	 *
-	 * @var
 	 */
 	String keyPhrase;
 
 	/**
 	 * Crypted message
 	 *
-	 * @var
 	 */
 	String cryptedMessage;
 
+	// constructor
+	public ProcessingParams() {
+		readData();
+	}
 
 	/**
 	 * Method read input params
 	 * message
-	 *
-	 * @return
 	 */
 	public void readData() {
 		//get string
