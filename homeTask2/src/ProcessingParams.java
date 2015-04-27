@@ -9,21 +9,31 @@ import java.io.PrintWriter;
 /**
  * Created by Ramzes on 17.04.2015.
  */
+
+
 public class ProcessingParams {
+
+
+	public String getMessage() {
+		return message;
+	}
+
+	public String getKeyPhrase() {
+		return keyPhrase;
+	}
+
 	/**
 	 * String to by crypted
 	 */
-	String message;
+	private String message;
 	/**
 	 * Code phrase
 	 */
-	String keyPhrase;
+	private String keyPhrase;
 
-	/**
-	 * Crypted message
-	 *
-	 */
-	String cryptedMessage;
+
+	private String cryptedMessage;
+
 
 	// constructor
 	public ProcessingParams() {
