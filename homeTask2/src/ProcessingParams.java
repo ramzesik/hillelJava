@@ -1,3 +1,5 @@
+import com.sun.prism.shader.Solid_TextureRGB_AlphaTest_Loader;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -14,13 +16,7 @@ import java.io.PrintWriter;
 public class ProcessingParams {
 
 
-	public String getMessage() {
-		return message;
-	}
 
-	public String getKeyPhrase() {
-		return keyPhrase;
-	}
 
 	/**
 	 * String to by crypted
@@ -30,7 +26,6 @@ public class ProcessingParams {
 	 * Code phrase
 	 */
 	private String keyPhrase;
-
 
 	private String cryptedMessage;
 
@@ -57,14 +52,19 @@ public class ProcessingParams {
 
 		//check input data
 		if (message == null || keyPhrase == null) {
-			JOptionPane.showMessageDialog(
-					new JFrame("Error message"),
-					"Message or keyPhrase is null, exiting"
-			);
+			showDialog("Error message", "Message or keyPhrase is null, exiting");
 			System.exit(0);
 		}
 
 
+	}
+
+
+	public void showDialog(String dialogCaption,String dialogText) {
+		 JOptionPane.showMessageDialog(
+				 new JFrame(dialogCaption),
+				 dialogText
+		 );
 	}
 
 
@@ -121,10 +121,23 @@ public class ProcessingParams {
 			writer.close();
 		} catch (IOException ex) {
 			// report
-			System.out.println("problem with file write" + ex);
+			showDialog("Error ", "Write to file write" + ex);
 			System.exit(0);
 		}
 	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public String getKeyPhrase() {
+		return keyPhrase;
+	}
+
+	public void setCryptedMessage(String cryptedMessage) {
+		this.cryptedMessage = cryptedMessage;
+	}
+
 
 
 }

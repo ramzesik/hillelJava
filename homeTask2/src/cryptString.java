@@ -8,24 +8,25 @@
 
 
 
-public class cryptString {
-
+public class CryptString {
 
 	public static void main(String[] args) {
 
-		ProcessingParams inputData = new ProcessingParams();
-
+		ProcessingParams processingParams = new ProcessingParams();
 		// coding
-		MyCrypt mycrypt = new MyCrypt(inputData.getMessage(),inputData.getKeyPhrase());
+		MyCrypt mycrypt = new MyCrypt(processingParams.getMessage(),processingParams.getKeyPhrase());
 
 
+		if (mycrypt.getErrorMessage()!=null) {
+			processingParams.showDialog("Error",mycrypt.getErrorMessage());
+			System.exit(0);
+		}
+
+		processingParams.setCryptedMessage(mycrypt.getCoded());
+		processingParams.showResult();
 		System.out.println("Some coded"  + mycrypt.getCoded());
 
-
-
-
-		inputData.showResult();
-		inputData.writeToFile();
+		processingParams.writeToFile();
 	}
 
 
