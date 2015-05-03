@@ -1,4 +1,3 @@
-import java.util.Objects;
 import java.util.Random;
 
 /**
@@ -11,14 +10,30 @@ public class ArraySort {
 		double[] firstArray = createRandomArray(10);
 
 
-		SelectionSort selectionSort = new SelectionSort();
-		selectionSort.setArrayToSort(firstArray);
+		MyArraySort myArraySort = new MyArraySort();
+		myArraySort.setArrayToSort(firstArray);
+		System.out.println(myArraySort.toString());
+		//first sort
 
-		int minIndex = selectionSort.getIndexOfMinElement(0);
-//		System.out.println(selectionSort.toString());
-		selectionSort.mySort();
 
-		System.out.println(selectionSort.toString());
+		myArraySort.mySort();
+		System.out.println(myArraySort.toString());
+
+
+		// revert array
+		myArraySort.reverArray();
+
+
+		myArraySort.mySortSelection();
+		System.out.println(myArraySort.toString());
+
+		// revert array
+		myArraySort.reverArray();
+
+		myArraySort.mySortBubble();
+		System.out.println(myArraySort.toString());
+
+
 
 
 	}
@@ -38,7 +53,6 @@ public class ArraySort {
 			double tmp = rand.nextDouble() * 1000;
 			// stange cast
 			double rounded =  (double) (int)((tmp - (int) tmp) >= 0.5 ? tmp + 1 : tmp) / 1000;
-
 			randomArray[i] = rounded;
 		}
 
