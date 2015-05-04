@@ -12,18 +12,37 @@ public class SelectionSorter extends MainSorter {
 		setArrayToSort(arrayToSort);
 	}
 
-	public void sort() {
+	public double[] sort() {
 		//walk through array
-
-		for (int z = 0; z < arrayToSort.length - 1; z++) {
+		for (int z = 0; z < arrayToSort.length -1 ; z++) {
 			// find first min element
 			int minIdx = getIndexOfMinElement(z);
 			if (minIdx != z) {
 				swapArrayidx(z, minIdx);
 			}
 		}
+		return arrayToSort;
 	}
 
+	/**
+	 * getMin index elemnt
+	 *
+	 * @param start
+	 * @return
+	 */
+	private int getIndexOfMinElement(int start) {
+
+		int minIndex = start;
+		double minVal = arrayToSort[start];
+		for (int z = start; z < arrayToSort.length ; z++) {
+			if (arrayToSort[z] < minVal) {
+				minIndex = z;
+				minVal = arrayToSort[z];
+			}
+		}
+		return minIndex;
+
+	}
 
 	// sort
 	/**

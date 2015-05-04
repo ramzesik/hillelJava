@@ -1,7 +1,7 @@
 /**
  * Created by Ramzes on 03.05.2015.
  */
-public class MainSorter {
+public abstract class MainSorter {
 
 	/**
 	 * array to sort
@@ -17,25 +17,7 @@ public class MainSorter {
 		this.arrayToSort = arrayToSort;
 	}
 
-	/**
-	 * getMin index elemnt
-	 *
-	 * @param start
-	 * @return
-	 */
-	public int getIndexOfMinElement(int start) {
 
-		int minIndex = start;
-		double minVal = arrayToSort[start];
-		for (int z = start; z < arrayToSort.length - 1; z++) {
-			if (arrayToSort[z] < minVal) {
-				minIndex = z;
-				minVal = arrayToSort[z];
-			}
-		}
-		return minIndex;
-
-	}
 
 	/**
 	 * Swap values in array by idx
@@ -82,6 +64,8 @@ public class MainSorter {
 		return result;
 	}
 
+
+	public abstract double[] sort();
 
 	private int size() {
 		return arrayToSort.length;
