@@ -17,8 +17,6 @@ public abstract class MainSorter {
 		this.arrayToSort = arrayToSort;
 	}
 
-
-
 	/**
 	 * Swap values in array by idx
 	 *

@@ -14,7 +14,7 @@ public class SelectionSorter extends MainSorter {
 
 	public double[] sort() {
 		//walk through array
-		for (int z = 0; z < arrayToSort.length -1 ; z++) {
+		for (int z = 0; z < arrayToSort.length - 1; z++) {
 			// find first min element
 			int minIdx = getIndexOfMinElement(z);
 			if (minIdx != z) {
@@ -34,7 +34,7 @@ public class SelectionSorter extends MainSorter {
 
 		int minIndex = start;
 		double minVal = arrayToSort[start];
-		for (int z = start; z < arrayToSort.length ; z++) {
+		for (int z = start; z < arrayToSort.length; z++) {
 			if (arrayToSort[z] < minVal) {
 				minIndex = z;
 				minVal = arrayToSort[z];
