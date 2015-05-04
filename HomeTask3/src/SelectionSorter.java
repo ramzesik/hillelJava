@@ -23,4 +23,25 @@ public class SelectionSorter extends MainSorter {
 			}
 		}
 	}
+
+
+	// sort
+	/**
+	 * 	public void mySort() {
+
+	 for (int z = 0; z < arrayToSort.length -1; z++) {
+	 int minValIndex = z;
+	 for (int y = z + 1; y < arrayToSort.length; y++) {
+	 if (arrayToSort[y] < arrayToSort[minValIndex]) {
+	 minValIndex = y;
+	 }
+	 }
+	 // if index of min element change swap it
+	 if (minValIndex != z) {
+	 swapArrayidx(z,minValIndex);
+	 }
+	 }
+	 }
+	 */
+
 }
