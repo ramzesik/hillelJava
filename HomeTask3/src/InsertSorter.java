@@ -8,7 +8,7 @@ public class InsertSorter extends MainSorter {
 	int j;
 
 		for (int i = 1; i < arrayToSort.length; i++) {
-			// get first value of array
+			// get second  value of array
 			double value = arrayToSort[i];
 
 			for ( j = i - 1; j >= 0 && arrayToSort[j] > value; j--) {
