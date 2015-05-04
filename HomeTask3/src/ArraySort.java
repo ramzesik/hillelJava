@@ -14,7 +14,7 @@ public class ArraySort {
 		System.out.println(MainSorter.toString(arrayRandom));
 		bubbleSorter.sort(arrayRandom);
 
-		System.out.println(bubbleSorter.toString());
+		System.out.println(MainSorter.toString(arrayRandom));
 
 		System.out.println(' ');
 
@@ -22,8 +22,7 @@ public class ArraySort {
 		System.out.println(MainSorter.toString(arrayRandom));
 		SelectionSorter selectionSorter = new SelectionSorter();
 		selectionSorter.sort(arrayRandom);
-
-		System.out.println(selectionSorter.toString());
+		System.out.println(MainSorter.toString(arrayRandom));
 	}
 
 

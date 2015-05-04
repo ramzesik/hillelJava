@@ -9,14 +9,14 @@ public class SelectionSorter extends MainSorter {
 	}
 
 
-	public void sort(double[] randomArray) {
-		arrayToSort = randomArray;
+	public void sort(double[] arrayToSort) {
+
 		//walk through array
 		for (int z = 0; z < arrayToSort.length - 1; z++) {
 			// find first min element
-			int minIdx = getIndexOfMinElement(z);
+			int minIdx = getIndexOfMinElement(arrayToSort,z);
 			if (minIdx != z) {
-				swapArrayidx(z, minIdx);
+				swapArrayidx(arrayToSort,z, minIdx);
 			}
 		}
 
@@ -28,7 +28,7 @@ public class SelectionSorter extends MainSorter {
 	 * @param start
 	 * @return
 	 */
-	private int getIndexOfMinElement(int start) {
+	private int getIndexOfMinElement(double[] arrayToSort,int start) {
 
 		int minIndex = start;
 		double minVal = arrayToSort[start];

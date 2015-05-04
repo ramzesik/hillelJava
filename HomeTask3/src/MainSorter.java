@@ -4,61 +4,40 @@
 public abstract class MainSorter {
 
 	/**
-	 * array to sort
-	 */
-	protected double[] arrayToSort;
-
-
-	/**
 	 * Swap values in array by idx
 	 *
 	 * @param idxFrom first idx
 	 * @param idxTo   second idx
 	 */
 
-	public void swapArrayidx(int idxFrom, int idxTo) {
+	protected void swapArrayidx(double[] arrayToSort,int idxFrom, int idxTo) {
 		double tmp = arrayToSort[idxFrom];
 		arrayToSort[idxFrom] = arrayToSort[idxTo];
 		arrayToSort[idxTo] = tmp;
 	}
 
-	@Override
-	public String toString() {
-		String result = "[";
-		for (int i = 0; i < size(); i++) {
-			result += arrayToSort[i];
-			if (i + 1 < size()) {
-				result += ", ";
-			}
-		}
-		result += "]";
-		return result;
-
-	}
 
 	/**
-	 * method to print array
-	 *
-	 * @param array
-	 * @return String result
+	 * keep it for print array sets
+	 * @param arrayPrint
+	 * @return
 	 */
-	public static String toString(double[] array) {
+	public static String toString(double[] arrayPrint) {
 		String result = "[";
-		for (int i = 0; i < array.length; i++) {
-			result += array[i];
-			if (i + 1 < array.length) {
+		for (int i = 0; i < arrayPrint.length; i++) {
+			result += arrayPrint[i];
+			if (i + 1 < arrayPrint.length) {
 				result += ", ";
 			}
 		}
 		result += "]";
 		return result;
+
 	}
 
 
 	public abstract void sort(double[] randomArray);
 
-	private int size() {
-		return arrayToSort.length;
-	}
+
 
 }
