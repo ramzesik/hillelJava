@@ -7,35 +7,21 @@ public class ArraySort {
 
 	public static void main(String[] args) {
 
-		double[] firstArray = createRandomArray(10);
-
-
-		MyArraySort myArraySort = new MyArraySort();
-		myArraySort.setArrayToSort(firstArray);
-		System.out.println(myArraySort.toString());
-		//first sort
-
-
-		myArraySort.mySort();
-		System.out.println(myArraySort.toString());
-
-
-		// revert array
-		myArraySort.reverArray();
-
-
-		myArraySort.mySortSelection();
-		System.out.println(myArraySort.toString());
-
-		// revert array
-		myArraySort.reverArray();
-
-		myArraySort.mySortBubble();
-		System.out.println(myArraySort.toString());
+		double[] arrayRandom = createRandomArray(10);
 
 
 
+		BubbleSorter bubbleSorter = new BubbleSorter(arrayRandom);
+		System.out.println(MainSorter.toString(arrayRandom));
 
+
+		double[] sortedArray  = bubbleSorter.sort();
+		System.out.println(bubbleSorter.toString());
+
+		SelectionSorter selectionSorter = new SelectionSorter(arrayRandom);
+		selectionSorter.sort();
+
+		System.out.println(selectionSorter.toString());
 	}
 
 
@@ -55,8 +41,6 @@ public class ArraySort {
 			double rounded =  (double) (int)((tmp - (int) tmp) >= 0.5 ? tmp + 1 : tmp) / 1000;
 			randomArray[i] = rounded;
 		}
-
-
 
 		return randomArray;
 	}

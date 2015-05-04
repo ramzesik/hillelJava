@@ -17,9 +17,6 @@ public class MyArraySort {
 		this.copyArrayToSort = arrayToSort;
 	}
 
-
-
-
 	public int getIndexOfMinElement(int start) {
 
 		int minIndex=start;
@@ -52,19 +49,6 @@ public class MyArraySort {
 	}
 
 
-	public void mySortBubble() {
-
-		for (int x=0;x< arrayToSort.length-1;x++) {
-
-			for (int z=0;z<arrayToSort.length-x-1;z++) {
-				if (arrayToSort[z]>arrayToSort[z+1]) {
-					swapArrayidx(z,z+1);
-				}
-			}
-
-		}
-
-	}
 
 	public void mySortSelection() {
 		//walk through array
@@ -91,9 +75,7 @@ public class MyArraySort {
 
 
 	public String toString() {
-
 		String result = "[";
-
 		for (int i = 0; i < size(); i++) {
 			result += arrayToSort[i];
 			if (i + 1 < size()) {
