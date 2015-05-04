@@ -92,7 +92,4 @@ public class MyArraySort {
 		return arrayToSort.length;
 	}
 
-	public void reverArray() {
-		arrayToSort= copyArrayToSort;
-	}
 }
