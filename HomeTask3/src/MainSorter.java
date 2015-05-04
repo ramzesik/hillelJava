@@ -8,14 +8,6 @@ public abstract class MainSorter {
 	 */
 	protected double[] arrayToSort;
 
-	/**
-	 * setArray
-	 *
-	 * @param arrayToSort
-	 */
-	public void setArrayToSort(double[] arrayToSort) {
-		this.arrayToSort = arrayToSort;
-	}
 
 	/**
 	 * Swap values in array by idx
@@ -63,7 +55,7 @@ public abstract class MainSorter {
 	}
 
 
-	public abstract double[] sort();
+	public abstract void sort(double[] randomArray);
 
 	private int size() {
 		return arrayToSort.length;

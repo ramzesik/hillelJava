@@ -8,11 +8,9 @@ public class SelectionSorter extends MainSorter {
 		super();
 	}
 
-	public SelectionSorter(double[] arrayToSort) {
-		setArrayToSort(arrayToSort);
-	}
 
-	public double[] sort() {
+	public void sort(double[] randomArray) {
+		arrayToSort = randomArray;
 		//walk through array
 		for (int z = 0; z < arrayToSort.length - 1; z++) {
 			// find first min element
@@ -21,7 +19,7 @@ public class SelectionSorter extends MainSorter {
 				swapArrayidx(z, minIdx);
 			}
 		}
-		return arrayToSort;
+
 	}
 
 	/**

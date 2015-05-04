@@ -10,16 +10,18 @@ public class ArraySort {
 		double[] arrayRandom = createRandomArray(10);
 
 
-
-		BubbleSorter bubbleSorter = new BubbleSorter(arrayRandom);
+		BubbleSorter bubbleSorter = new BubbleSorter();
 		System.out.println(MainSorter.toString(arrayRandom));
+		bubbleSorter.sort(arrayRandom);
 
-
-		double[] sortedArray  = bubbleSorter.sort();
 		System.out.println(bubbleSorter.toString());
 
-		SelectionSorter selectionSorter = new SelectionSorter(arrayRandom);
-		selectionSorter.sort();
+		System.out.println(' ');
+
+		arrayRandom = createRandomArray(10);
+		System.out.println(MainSorter.toString(arrayRandom));
+		SelectionSorter selectionSorter = new SelectionSorter();
+		selectionSorter.sort(arrayRandom);
 
 		System.out.println(selectionSorter.toString());
 	}
@@ -38,7 +40,7 @@ public class ArraySort {
 		for (int i = 0; i < arraySize; i++) {
 			double tmp = rand.nextDouble() * 1000;
 			// stange cast
-			double rounded =  (double) (int)((tmp - (int) tmp) >= 0.5 ? tmp + 1 : tmp) / 1000;
+			double rounded = (double) (int) ((tmp - (int) tmp) >= 0.5 ? tmp + 1 : tmp) / 1000;
 			randomArray[i] = rounded;
 		}
 

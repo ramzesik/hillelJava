@@ -2,6 +2,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
+import static junit.framework.Assert.assertTrue;
 import static junit.framework.TestCase.assertEquals;
 
 /**
@@ -14,13 +15,13 @@ public class SelectionSorterTest {
 		double[] arrayExpected = {0.1, 0.1, 0.2, 0.5, 1.0, 1.0, 1.1, 2.0, 2.0, 3.0, 3.4, 4.0, 5.0, 5.1, 6.0, 22.0, 234.0, 111111.0};
 
 		SelectionSorter selectionSorter = new SelectionSorter();
-		selectionSorter.setArrayToSort(arrayRandom);
-		selectionSorter.sort();
+		selectionSorter.sort(arrayRandom);
 
 		System.out.println(selectionSorter.toString());
 		System.out.println(Arrays.toString(arrayExpected));
 
-		assertEquals(Arrays.toString(arrayExpected), selectionSorter.toString());
+		assertTrue(Arrays.equals(arrayExpected, arrayRandom));
+
 
 	}
 }

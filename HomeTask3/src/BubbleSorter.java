@@ -8,13 +8,9 @@ public class BubbleSorter extends MainSorter {
 		super();
 	}
 
-	public BubbleSorter(double[] arrayToSort) {
-		setArrayToSort(arrayToSort);
-	}
 
-
-	public double[] sort() {
-
+	public void sort(double[] randomArray) {
+		arrayToSort = randomArray;
 		for (int x = 0; x < arrayToSort.length - 1; x++) {
 
 			for (int z = 0; z < arrayToSort.length - x - 1; z++) {
@@ -23,6 +19,6 @@ public class BubbleSorter extends MainSorter {
 				}
 			}
 		}
-		return arrayToSort;
+
 	}
 }

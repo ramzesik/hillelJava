@@ -3,6 +3,7 @@ import org.junit.Test;
 import java.util.*;
 
 
+import static junit.framework.Assert.assertTrue;
 import static junit.framework.TestCase.assertEquals;
 
 
@@ -19,10 +20,11 @@ public class BubbleSorterTest {
 
 
 		BubbleSorter bubbleSorter = new BubbleSorter();
-		bubbleSorter.setArrayToSort(arrayRandom);
-		bubbleSorter.sort();
+
+		bubbleSorter.sort(arrayRandom);
 		System.out.println(bubbleSorter.toString());
 
+		assertTrue(Arrays.equals(arrayExpected, arrayRandom));
 		assertEquals(Arrays.toString(arrayExpected), bubbleSorter.toString());
 
 	}
