@@ -25,11 +25,11 @@ public class InsertSorterTest {
 		double[] arrayExpected = {1,2,2,3,4,7,8};
 
 
-		System.out.println(MainSorter.toString(arrayRandom));
+		System.out.println(Arrays.toString(arrayRandom));
 
 		insertSortert.sort(arrayRandom);
 
-		System.out.println(MainSorter.toString(arrayExpected));
+		System.out.println(Arrays.toString(arrayExpected));
 
 		assertTrue(Arrays.equals(arrayExpected, arrayRandom)
 

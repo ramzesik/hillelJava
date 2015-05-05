@@ -20,11 +20,11 @@ public class BubbleSorterTest {
 
 
 		BubbleSorter bubbleSorter = new BubbleSorter();
-		System.out.println(MainSorter.toString(arrayRandom));
+		System.out.println(Arrays.toString(arrayRandom));
 
 		bubbleSorter.sort(arrayRandom);
 
-		System.out.println(MainSorter.toString(arrayExpected));
+		System.out.println(Arrays.toString(arrayExpected));
 
 		assertTrue(Arrays.equals(arrayExpected, arrayRandom));
 		//assertEquals(Arrays.toString(arrayExpected), bubbleSorter.toString());

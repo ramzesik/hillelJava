@@ -1,7 +1,7 @@
 /**
  * Created by Ramzes on 03.05.2015.
  */
-public abstract class MainSorter {
+public abstract class MainSorter implements Sorter {
 
 	/**
 	 * Swap values in array by idx
@@ -15,28 +15,6 @@ public abstract class MainSorter {
 		arrayToSort[idxFrom] = arrayToSort[idxTo];
 		arrayToSort[idxTo] = tmp;
 	}
-
-
-	/**
-	 * keep it for print array sets
-	 * @param arrayPrint
-	 * @return
-	 */
-	public static String toString(double[] arrayPrint) {
-		String result = "[";
-		for (int i = 0; i < arrayPrint.length; i++) {
-			result += arrayPrint[i];
-			if (i + 1 < arrayPrint.length) {
-				result += ", ";
-			}
-		}
-		result += "]";
-		return result;
-
-	}
-
-
-	public abstract void sort(double[] randomArray);
 
 
 

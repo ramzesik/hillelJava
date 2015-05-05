@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -11,18 +13,18 @@ public class ArraySort {
 
 
 		BubbleSorter bubbleSorter = new BubbleSorter();
-		System.out.println(MainSorter.toString(arrayRandom));
+		System.out.println(Arrays.toString(arrayRandom));
 		bubbleSorter.sort(arrayRandom);
 
-		System.out.println(MainSorter.toString(arrayRandom));
+		System.out.println(Arrays.toString(arrayRandom));
 
 		System.out.println(' ');
 
 		arrayRandom = createRandomArray(10);
-		System.out.println(MainSorter.toString(arrayRandom));
+		System.out.println(Arrays.toString(arrayRandom));
 		SelectionSorter selectionSorter = new SelectionSorter();
 		selectionSorter.sort(arrayRandom);
-		System.out.println(MainSorter.toString(arrayRandom));
+		System.out.println(Arrays.toString(arrayRandom));
 	}
 
 

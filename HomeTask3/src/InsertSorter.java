@@ -1,7 +1,7 @@
 /**
  * Created by Ramzes on 04.05.2015.
  */
-public class InsertSorter extends MainSorter {
+public class InsertSorter implements Sorter {
 
 
 	public void sort(double[] arrayToSort) {

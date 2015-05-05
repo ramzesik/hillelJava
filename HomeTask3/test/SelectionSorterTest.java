@@ -17,7 +17,7 @@ public class SelectionSorterTest {
 
 
 
-		System.out.println(MainSorter.toString(arrayRandom));
+		System.out.println(Arrays.toString(arrayRandom));
 
 
 		SelectionSorter selectionSorter = new SelectionSorter();
