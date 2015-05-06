@@ -3,7 +3,7 @@
  */
 public interface Sorter {
 
-	  void sort(double[] randomArray);
+    void sort(double[] randomArray);
 
 }
 

@@ -3,19 +3,18 @@
  */
 class Swaper {
 
-	/**
-	 * Swap values in array by idx
-	 *
-	 * @param idxFrom first idx
-	 * @param idxTo   second idx
-	 */
+    /**
+     * Swap values in array by idx
+     *
+     * @param idxFrom first idx
+     * @param idxTo   second idx
+     */
 
-	public void swapArrayidx(double[] arrayToSort, int idxFrom, int idxTo) {
-		double tmp = arrayToSort[idxFrom];
-		arrayToSort[idxFrom] = arrayToSort[idxTo];
-		arrayToSort[idxTo] = tmp;
-	}
-
+    public void swapArrayidx(double[] arrayToSort, int idxFrom, int idxTo) {
+        double tmp = arrayToSort[idxFrom];
+        arrayToSort[idxFrom] = arrayToSort[idxTo];
+        arrayToSort[idxTo] = tmp;
+    }
 
 
 }
