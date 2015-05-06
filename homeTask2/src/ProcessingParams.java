@@ -15,9 +15,6 @@ import java.io.PrintWriter;
 
 public class ProcessingParams {
 
-
-
-
 	/**
 	 * String to by crypted
 	 */
