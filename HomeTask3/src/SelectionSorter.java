@@ -1,12 +1,11 @@
 /**
  * Created by Ramzes on 03.05.2015.
  */
-public class SelectionSorter extends MainSorter {
+public class SelectionSorter implements Sorter {
 
 
-	public SelectionSorter() {
-		super();
-	}
+	private Swaper swaper = new Swaper();
+
 
 
 	public void sort(double[] arrayToSort) {
@@ -16,7 +15,7 @@ public class SelectionSorter extends MainSorter {
 			// find first min element
 			int minIdx = getIndexOfMinElement(arrayToSort,z);
 			if (minIdx != z) {
-				swapArrayidx(arrayToSort,z, minIdx);
+				swaper.swapArrayidx(arrayToSort, z, minIdx);
 			}
 		}
 

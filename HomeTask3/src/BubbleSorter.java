@@ -1,12 +1,10 @@
 /**
  * Created by Ramzes on 03.05.2015.
  */
-public class BubbleSorter extends MainSorter {
+public class BubbleSorter implements Sorter {
 
 
-	public BubbleSorter() {
-		super();
-	}
+	private Swaper swaper = new Swaper();
 
 
 	public void sort(double[] arrayToSort) {
@@ -15,7 +13,7 @@ public class BubbleSorter extends MainSorter {
 
 			for (int z = 0; z < arrayToSort.length - x - 1; z++) {
 				if (arrayToSort[z] > arrayToSort[z + 1]) {
-					swapArrayidx(arrayToSort,z, z + 1);
+					swaper.swapArrayidx(arrayToSort, z, z + 1);
 				}
 			}
 		}
